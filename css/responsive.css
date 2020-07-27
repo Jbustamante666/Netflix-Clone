@@ -1,12 +1,4 @@
-@media screen and (max-width: 950px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-        font-weight: bold;
-    }
+@media only screen and (max-width: 949px) {
 
     .hero-form-container .form-inputs {
         grid-template-columns: auto;
@@ -15,14 +7,18 @@
 
     .hero-form-title {
         grid-row: 1 / 1;
-        font-size: 1rem;
-        font-weight: bold;
+        max-width: 50%;
+        margin: auto;
+        line-height: 1.5;
+    }
+
+    .hero .form-inputs {
+        margin: auto;
+        min-width: 60%;
     }
 
     .hero .form-inputs .email {
-        width: 70%;
-        height: 48px;
-        margin: auto;
+        height: inherit;
     }
 
     .hero .form-inputs .submit {
@@ -30,5 +26,57 @@
         justify-self: center;
         font-size: 1rem;
         padding: 0 16px;
+    }
+}
+
+@media only screen and (max-width: 739px) {
+
+    .hero-container {
+        padding-top: 80px;
+    }
+
+    .hero-form-title {
+        max-width: 65%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .hero .form-inputs {
+        margin: auto;
+        min-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 549px) {
+
+    .navbar-header .logo {
+        width: 80px;
+    }
+
+    .navbar-header .inicio-sesion {
+        font-size: .9rem;
+        padding: 5px 10px;
+    }
+
+    .hero-container {
+        padding-top: 100px;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .hero .form-inputs {
+        margin: auto;
+        min-width: 90%;
+    }
+
+    .hero .form-inputs .email {
+        height: 48px;
     }
 }

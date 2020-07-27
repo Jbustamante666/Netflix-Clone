@@ -83,11 +83,11 @@ header {
 }
 
 .hero-container {
+    min-width: 80%;
     padding-top: 150px;
     text-align: center;
     color: white;
     display: grid;
-    grid-template-columns: 90%;
     grid-gap: 20px;
     justify-content: center;
     justify-items: center;
@@ -101,16 +101,19 @@ header {
 
 .hero-subtitle {
     max-width: 640px;
-    font-weight: 400;
     font-size: 1.625rem;
+    font-weight: normal;
 }
 
 .hero-form-container {
     display: grid;
+    justify-self: stretch;
     grid-gap: 20px;
 }
 
 .hero .form-inputs {
+    min-width: 80%;
+    margin: 0 auto;
     height: 60px;
     display: grid;
     grid-template-columns: 1fr minmax(auto, 255.52px);
@@ -138,6 +141,11 @@ header {
 .hero .form-inputs .submit:hover {
     background: #f40612;
     box-shadow: 0 1px 0 rgba(0,0,0,.45);
+}
+
+.hero-form-title {
+    font-size: 1.2rem;
+    font-weight: normal;
 }
 
 /* Seccion disfruta-tv */
