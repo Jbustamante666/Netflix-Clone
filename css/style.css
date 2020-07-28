@@ -1,4 +1,5 @@
-/* Estilos Generales */
+/* ========== Estilos Generalrs ========== */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 html {
     box-sizing: border-box;
 }
@@ -7,202 +8,156 @@ html {
 }
 
 body {
-    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: black;
     font-size: 16px;
+    min-width: 320px;
 }
 
- a {
+a {
     text-decoration: none;
     color: white;
 }
 
-/* Utilidades */
+/* ========== Utilidades ========== */
 h1,
 h2,
 h3,
 h4 {
     margin: 0;
+    color: white;
 }
-.btn-color {
+
+.btn-login {
     background-color: #e50914;
+    font-size: .9rem;
+    padding: .30rem .5rem;
     border-radius: 3px;
 }
 
-.background-image {
-    width: 100%;
-    height: 668.594px;
-    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/a6fede83-60f5-4588-93a1-b82b099db1d0/99226a35-6fb7-48a5-aab9-ed11f0ce6024/VE-es-20200720-popsignuptwoweeks-perspective_alpha_website_large.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
+.btn-form {
+    background-color: #e50914;
+    padding: .7rem 1.5rem;
+    color: white;
+    border: solid 1px #8c8c8c;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
-.background-image::before {
+.btn-form:hover {
+    background: #f40612;
+    box-shadow: 0 1px 0 rgba(0,0,0,.45);
+}
+
+/* ========== Seccion del Header ========== */
+header {
+    position: relative;
+    z-index: 1;
+}
+
+header .navbar {
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+header .navbar .logo-netflix {
+    margin: 0;
+    width: 90px;
+}
+
+header .navbar .logo-netflix img {
+    width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+/* ========== Seccion del Hero ========== */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 480px;
+}
+
+.hero-container {
+    position: absolute;
+    top: -75.09px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/a6fede83-60f5-4588-93a1-b82b099db1d0/99226a35-6fb7-48a5-aab9-ed11f0ce6024/VE-es-20200720-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-container::before {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(black, transparent, black);
-    opacity: .95;
+    background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.3), rgba(0,0,0,.9));
 }
 
-/* Estilos del Header */
-header {
+.hero-content {
     position: relative;
-}
-
-.navbar-header {
     width: 90%;
-    margin: auto;
+    margin: 35% auto 10px;
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    justify-content: space-between;
-    padding: 25px 0;
-}
-
-.navbar-header .logo {
-    width: 134px;
-}
-
-.navbar-header img {
-    width: 100%;
-    vertical-align: top;
-}
-
-.navbar-header .inicio-sesion {
-    padding: 7px 17px;
-}
-
-/* Estilos del Main */
-.hero {
-    position: relative;
-}
-
-.hero-container {
-    min-width: 80%;
-    padding-top: 150px;
-    text-align: center;
-    color: white;
-    display: grid;
-    grid-gap: 20px;
-    justify-content: center;
-    justify-items: center;
+    grid-gap: 10px;
+    align-items: center;
 }
 
 .hero-title {
-    max-width: 640px;
-    line-height: 1.1;
-    font-size: 3.125rem;
+    font-size: 1.75rem;
+    text-align: center;
+    line-height: 1.5;
 }
 
 .hero-subtitle {
-    max-width: 640px;
-    font-size: 1.625rem;
+    font-size: 1.125rem;
+    text-align: center;
     font-weight: normal;
+    line-height: 1.5;
 }
 
-.hero-form-container {
+.form-container {
     display: grid;
-    justify-self: stretch;
-    grid-gap: 20px;
+    grid-gap: 10px;
+}
+
+.hero .form-title {
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 18px;
 }
 
 .hero .form-inputs {
-    min-width: 80%;
-    margin: 0 auto;
-    height: 60px;
     display: grid;
-    grid-template-columns: 1fr minmax(auto, 255.52px);
+    grid-gap: 10px;
+    grid-template-columns: minmax(auto, 500px);
+    justify-content: center;
 }
 
 .hero .form-inputs .email {
+    height: 48px;
     outline: none;
-    padding: 12px;
     border: solid 1px #8c8c8c;
     border-radius: 2px;
-    border-top-right-radius: none;
-    border-bottom-right-radius: none;
+    padding: 5px;
 }
 
 .hero .form-inputs .submit {
-    font-size: 1.625rem;
-    border: solid 1px #8c8c8c;
-    border-top-left-radius: none;
-    border-bottom-left-radius: none;
-    border-radius: 2px;
-    cursor: pointer;
-    color: white;
-}
-
-.hero .form-inputs .submit:hover {
-    background: #f40612;
-    box-shadow: 0 1px 0 rgba(0,0,0,.45);
-}
-
-.hero-form-title {
-    font-size: 1.2rem;
-    font-weight: normal;
-}
-
-/* Seccion disfruta-tv */
-.disfruta-tv {
-    border-top: 8px solid #222;
-}
-
-.disfruta-tv-container {
-    width: 86%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    align-items: center;
-    color: white;
-}
-
-.disfruta-tv-text {
-    display: grid;
-    grid-gap: 20px;
-    padding-right: 48px;
-}
-
-.disfruta-tv-text h2 {
-    font-size: 42px;
-    line-height: 1.1;
-    margin-bottom: .5rem;
-}
-
-.disfruta-tv-text h3 {
-    font-size: 24px;
-    line-height: 1.3;
-    font-weight: 400;
-}
-
-.disfruta-tv-multimedia {
-    width: 100%;
-    height: 397.641px;
-    background-image: url('https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-
-.disfruta-tv-video {
-    width: 72.5%;
-    height: inherit;
-    position: relative;
-    top: -1.5%;
-    z-index: -1;
-    margin: auto;
-    display: grid;
-    align-items: center;
-}
-
-.disfruta-tv-video video {
-    width: 100%;
+    justify-self: center;
+    text-transform: uppercase;
 }
 
 

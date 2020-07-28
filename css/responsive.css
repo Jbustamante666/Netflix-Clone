@@ -1,82 +1,103 @@
-@media only screen and (max-width: 949px) {
+/* ========== Pantallas mayores a 550px y menores a 739px ========== */
+@media only screen and (min-width: 550px) {
+    /* ========== Utilidades ========== */
 
-    .hero-form-container .form-inputs {
-        grid-template-columns: auto;
-        grid-gap: 16px;
-    }
-
-    .hero-form-title {
-        grid-row: 1 / 1;
-        max-width: 50%;
-        margin: auto;
-        line-height: 1.5;
-    }
-
-    .hero .form-inputs {
-        margin: auto;
-        min-width: 60%;
-    }
-
-    .hero .form-inputs .email {
-        height: inherit;
-    }
-
-    .hero .form-inputs .submit {
-        height: 40px;
-        justify-self: center;
+    .btn-login {
         font-size: 1rem;
-        padding: 0 16px;
-    }
-}
-
-@media only screen and (max-width: 739px) {
-
-    .hero-container {
-        padding-top: 80px;
+        padding: .5rem .8rem;
     }
 
-    .hero-form-title {
-        max-width: 65%;
-        margin: auto;
-        font-size: 18px;
-        line-height: 1.2;
+    /* ========== Seccion del Header ========== */
+
+    header .navbar {
+        width: 80%;
     }
 
-    .hero .form-inputs {
-        margin: auto;
-        min-width: 80%;
-    }
-}
-
-@media only screen and (max-width: 549px) {
-
-    .navbar-header .logo {
-        width: 80px;
+    header .navbar .logo-netflix {
+        width: 108px;
     }
 
-    .navbar-header .inicio-sesion {
-        font-size: .9rem;
-        padding: 5px 10px;
+    /* ========== Seccion del Hero ========== */
+
+    .hero {
+        height: 668.594px;
     }
 
-    .hero-container {
-        padding-top: 100px;
+    .hero-content {
+        margin-top: 25%;
+        width: 85%;
     }
 
     .hero-title {
-        font-size: 1.75rem;
+        font-size: 3.125rem;
+        line-height: 1.2;
     }
 
     .hero-subtitle {
-        font-size: 1.125rem;
+        font-size: 1.625rem;
+    }
+}
+
+/* ========== Pantallas mayores a 740px y menores a 949px ========== */
+@media only screen and (min-width: 740px) {
+    /* ========== Seccion del Hero ========== */
+
+    .hero-content {
+        margin-top: 25%;
     }
 
-    .hero .form-inputs {
-        margin: auto;
-        min-width: 90%;
+    .hero .form-title {
+        font-size: 23px;
+        padding: 0 15%;
     }
 
     .hero .form-inputs .email {
-        height: 48px;
+        height: 60px;
     }
+
+}
+
+/* ========== Pantallas mayores a 950px ========== */
+@media only screen and (min-width: 950px) {
+    /* ========== Seccion del Hero ========== */
+
+    .hero-content {
+        margin-top: 250px;
+        grid-gap: 20px;
+    }
+
+    .hero-title {
+        padding: 0 20%;
+    }
+
+    .hero-subtitle {
+        padding: 0 20%;
+    }
+
+    .form-container {
+        grid-gap: 20px;
+    }
+
+    .hero .form-title {
+        grid-row-start: 2;
+        padding: 0;
+        font-size: 1.2rem;
+    }
+
+    .hero .form-inputs {
+        grid-template-columns: minmax(auto, 500px) auto;
+        grid-gap: 0;
+    }
+
+    .hero .form-inputs .email {
+        border-top-right-radius: none;
+        border-bottom-right-radius: none;
+    }
+
+    .hero .form-inputs .input {
+        height: 60px;
+        border-top-left-radius: none;
+        border-bottom-left-radius: none;
+    }
+
 }
