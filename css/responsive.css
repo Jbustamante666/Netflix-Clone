@@ -1,14 +1,12 @@
 /* ========== Pantallas mayores a 550px y menores a 739px ========== */
 @media only screen and (min-width: 550px) {
     /* ========== Utilidades ========== */
-
     .btn-login {
         font-size: 1rem;
         padding: .5rem .8rem;
     }
 
     /* ========== Seccion del Header ========== */
-
     header .navbar {
         width: 80%;
     }
@@ -18,7 +16,6 @@
     }
 
     /* ========== Seccion del Hero ========== */
-
     .hero {
         height: 668.594px;
     }
@@ -36,12 +33,34 @@
     .hero-subtitle {
         font-size: 1.625rem;
     }
+
+    /* ========== Seccion del Main ========== */
+    .main-seccion-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .main-seccion-multimedia .multimedia-gif {
+        width: 55%;
+        top: 68%;
+        left: 21.5%;
+    }
+
+    .main-seccion-multimedia .image-gif {
+        width: 45.7px;
+    }
+
+    .main-seccion-multimedia .multimedia-gif-text p {
+        font-size: 1em;
+    }
+
+    .main-seccion-multimedia .multimedia-gif-text small {
+        font-size: .9em;
+    }
 }
 
 /* ========== Pantallas mayores a 740px y menores a 949px ========== */
 @media only screen and (min-width: 740px) {
     /* ========== Seccion del Hero ========== */
-
     .hero-content {
         margin-top: 25%;
     }
@@ -55,12 +74,15 @@
         height: 60px;
     }
 
+    /* ========== Seccion del Main ========== */
+    .main-seccion-multimedia .multimedia-gif {
+        top: 68%;
+    }
 }
 
 /* ========== Pantallas mayores a 950px ========== */
 @media only screen and (min-width: 950px) {
     /* ========== Seccion del Hero ========== */
-
     .hero-content {
         margin-top: 250px;
         grid-gap: 20px;
@@ -100,4 +122,16 @@
         border-bottom-left-radius: none;
     }
 
+    /* ========== Seccion del Main ========== */
+    .main-seccion {
+        padding: 3% 0;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 16px;
+        align-items: center;
+    }
+
+    .main-seccion .multimedia-left {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
 }

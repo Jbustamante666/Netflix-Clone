@@ -19,7 +19,6 @@ a {
     color: white;
 }
 
-/* ========== Utilidades ========== */
 h1,
 h2,
 h3,
@@ -28,6 +27,26 @@ h4 {
     color: white;
 }
 
+p {
+    margin: 0;
+    color: white;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+video {
+    width: 100%;
+}
+
+/* ========== Utilidades ========== */
 .btn-login {
     background-color: #e50914;
     font-size: .9rem;
@@ -49,6 +68,10 @@ h4 {
     box-shadow: 0 1px 0 rgba(0,0,0,.45);
 }
 
+.border-top {
+    border-top: 8px solid #222;
+}
+
 /* ========== Seccion del Header ========== */
 header {
     position: relative;
@@ -67,14 +90,7 @@ header .navbar {
 }
 
 header .navbar .logo-netflix {
-    margin: 0;
     width: 90px;
-}
-
-header .navbar .logo-netflix img {
-    width: 100%;
-    vertical-align: top;
-    object-fit: cover;
 }
 
 /* ========== Seccion del Hero ========== */
@@ -161,3 +177,99 @@ header .navbar .logo-netflix img {
 }
 
 
+/* ========== Seccion del Main ========== */
+.main-seccion {
+    width: 90%;
+    margin: 0 auto;
+    padding: 8% 0;
+    display: grid;
+    justify-items: center;
+}
+
+.main-seccion-text {
+    text-align: center;
+}
+
+.main-seccion-text h2 {
+    font-size: 1.625rem;
+    line-height: 1.1;
+    margin-bottom: .5rem;
+}
+
+.main-seccion-text h3 {
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+.main-seccion-multimedia {
+    position: relative;
+}
+
+.main-seccion-multimedia .multimedia-image {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-seccion-multimedia .multimedia-video-1 {
+    width: 58.5%;
+    position: absolute;
+    top: 20.5%;
+    left: 20.5%;
+}
+
+.main-seccion-multimedia .multimedia-video-2 {
+    width: 50%;
+    position: absolute;
+    top: 10%;
+    left: 24%;
+}
+
+.main-seccion-multimedia .multimedia-gif {
+    margin: 0 auto;
+    position: absolute;
+    width: 70%;
+    min-width: 203.313;
+    top: 63%;
+    left: 14.5%;
+    z-index: 1;
+    padding: 12px;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    align-items: center;
+    border: 2px solid rgba(255,255,255,.25);
+    box-shadow: 0 0 2em 0 #000;
+    border-radius: .75em;
+}
+
+.main-seccion-multimedia .image-gif {
+    width: 34.281px;
+}
+
+.main-seccion-multimedia .multimedia-gif-text {
+    padding-left: 5%;
+}
+
+.main-seccion-multimedia .multimedia-gif-text p {
+    font-weight: 600;
+    font-size: .9em;
+}
+
+.main-seccion-multimedia .multimedia-gif-text small {
+    color: #0071eb;
+    font-size: .75em;
+    font-weight: 400;
+}
+
+.main-seccion-multimedia .multimedia-gif::after {
+    content: '';
+    width: 3em;
+    height: 3em;
+    outline: 2px solid #000;
+    outline-offset: -2px;
+    display: block;
+    background: url(https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/download-icon.gif) center center no-repeat;
+    background-size: 100%;
+}
